@@ -1,0 +1,24 @@
+namespace IJunior_Task_12
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int numberSum = 0;
+
+            Random random = new Random();
+            int number = random.Next(0, 100);
+
+            for (int i = 0; i < number + 1; i++)
+            {
+                if (i % 3 == 0 || i % 5 == 0)
+                {
+                    numberSum += i;
+                    Console.WriteLine(i);
+                }
+            }
+            Console.WriteLine($"Случайное число: {number}");
+            Console.WriteLine($"Сумма чисел: {numberSum}");
+        }
+    }
+}
