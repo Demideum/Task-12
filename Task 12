@@ -5,13 +5,18 @@ namespace IJunior_Task_12
         static void Main(string[] args)
         {
             int numberSum = 0;
+            int minRangeRandom = 0;
+            int maxRangeRandom = 100;
+            int firstMultipleNumber = 3;
+            int secondMultipleNumber = 5;
+
 
             Random random = new Random();
-            int number = random.Next(0, 100);
+            int number = random.Next(minRangeRandom, maxRangeRandom);
 
             for (int i = 0; i < number + 1; i++)
             {
-                if (i % 3 == 0 || i % 5 == 0)
+                if (i % firstMultipleNumber == 0 || i % secondMultipleNumber == 0)
                 {
                     numberSum += i;
                     Console.WriteLine(i);
